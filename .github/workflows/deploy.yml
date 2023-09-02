@@ -1,0 +1,16 @@
+
+name: "CodeQL"
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: A job to deploy to render
+    steps:
+      - name: Deploy and wait
+        uses: ashishkujoy/render-deploy@v0.0.1
+        with:
+          service-id: fake-service-id
+          service-key: fake-service-key
+          api-key: fake-api-key
